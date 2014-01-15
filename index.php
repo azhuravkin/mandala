@@ -1,13 +1,17 @@
 <?php
-    $size = 600;
-    $font = "/usr/share/fonts/dejavu/DejaVuSerif.ttf";
+    $size = 2000;
+    $font_size = $size / 70;
+    $font = '/usr/share/fonts/dejavu/DejaVuSerif.ttf';
     $image = imagecreate($size, $size);
-
     $white = imagecolorallocate($image, 255, 255, 255);
     $black = imagecolorallocate($image, 0, 0, 0);
     $red = imagecolorallocate($image, 255, 0, 0);
 
-    imageellipse($image, $size / 2, $size / 2, $size, $size, $black);
+    imagesetthickness($image, 3);
+
+//    imageellipse($image, $size / 2, $size / 2, $size, $size, $black);
+    imagearc($image, $size / 2, $size / 2, $size, $size, 0, 180, $black);
+    imagearc($image, $size / 2, $size / 2, $size, $size, 180, 360, $black);
 
     $side_of_square = $size / sqrt(2);
     $square_xy_1 = ($size - $side_of_square) / 2;
@@ -46,16 +50,15 @@
     imagefilledellipse($image, $size / 2, $size - $size / 4, $size / 100, $size / 100, $black);
     imagefilledellipse($image, $size - $size / 4, $size - $size / 4, $size / 100, $size / 100, $black);
 
-
-    imagettftext($image, $size / 50, 0, $size / 4 - $size / 100, $size / 4 - $size / 100, $black, $font, '1');
-    imagettftext($image, $size / 50, 0, $size / 2 - $size / 100, $size / 4 - $size / 100, $black, $font, '2');
-    imagettftext($image, $size / 50, 0, $size - $size / 4 - $size / 100, $size / 4 - $size / 100, $black, $font, '3');
-    imagettftext($image, $size / 50, 0, $size / 4 - $size / 100, $size / 2 - $size / 100, $black, $font, '4');
-    imagettftext($image, $size / 50, 0, $size / 2 - $size / 100, $size / 2 - $size / 100, $black, $font, '5');
-    imagettftext($image, $size / 50, 0, $size - $size / 4 - $size / 100, $size / 2 - $size / 100, $black, $font, '6');
-    imagettftext($image, $size / 50, 0, $size / 4 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '7');
-    imagettftext($image, $size / 50, 0, $size / 2 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '8');
-    imagettftext($image, $size / 50, 0, $size - $size / 4 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '9');
+    imagettftext($image, $font_size, 0, $size / 4 - $size / 100, $size / 4 - $size / 100, $black, $font, '1');
+    imagettftext($image, $font_size, 0, $size / 2 - $size / 100, $size / 4 - $size / 100, $black, $font, '2');
+    imagettftext($image, $font_size, 0, $size - $size / 4 - $size / 100, $size / 4 - $size / 100, $black, $font, '3');
+    imagettftext($image, $font_size, 0, $size / 4 - $size / 100, $size / 2 - $size / 100, $black, $font, '4');
+    imagettftext($image, $font_size, 0, $size / 2 - $size / 100, $size / 2 - $size / 100, $black, $font, '5');
+    imagettftext($image, $font_size, 0, $size - $size / 4 - $size / 100, $size / 2 - $size / 100, $black, $font, '6');
+    imagettftext($image, $font_size, 0, $size / 4 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '7');
+    imagettftext($image, $font_size, 0, $size / 2 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '8');
+    imagettftext($image, $font_size, 0, $size - $size / 4 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '9');
 
     header("Content-type: image/png");
     imagepng($image);
