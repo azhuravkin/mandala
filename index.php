@@ -1,6 +1,6 @@
 <?php
-    $size = 800;
-
+    $size = 600;
+    $font = "/usr/share/fonts/dejavu/DejaVuSerif.ttf";
     $image = imagecreate($size, $size);
 
     $white = imagecolorallocate($image, 255, 255, 255);
@@ -35,6 +35,27 @@
     imagearc($image, $size / 2, $size / 2, $size - $square_xy_1, $size - $square_xy_1, 350, 10, $black);
     imagearc($image, $size / 2, $size / 2, $size - $square_xy_1, $size - $square_xy_1, 80, 100, $black);
     imagearc($image, $size / 2, $size / 2, $size - $square_xy_1, $size - $square_xy_1, 170, 190, $black);
+
+    imagefilledellipse($image, $size / 4, $size / 4, $size / 100, $size / 100, $black);
+    imagefilledellipse($image, $size / 2, $size / 4, $size / 100, $size / 100, $black);
+    imagefilledellipse($image, $size - $size / 4, $size / 4, $size / 100, $size / 100, $black);
+    imagefilledellipse($image, $size / 4, $size / 2, $size / 100, $size / 100, $black);
+    imagefilledellipse($image, $size / 2, $size / 2, $size / 100, $size / 100, $black);
+    imagefilledellipse($image, $size - $size / 4, $size / 2, $size / 100, $size / 100, $black);
+    imagefilledellipse($image, $size / 4, $size - $size / 4, $size / 100, $size / 100, $black);
+    imagefilledellipse($image, $size / 2, $size - $size / 4, $size / 100, $size / 100, $black);
+    imagefilledellipse($image, $size - $size / 4, $size - $size / 4, $size / 100, $size / 100, $black);
+
+
+    imagettftext($image, $size / 50, 0, $size / 4 - $size / 100, $size / 4 - $size / 100, $black, $font, '1');
+    imagettftext($image, $size / 50, 0, $size / 2 - $size / 100, $size / 4 - $size / 100, $black, $font, '2');
+    imagettftext($image, $size / 50, 0, $size - $size / 4 - $size / 100, $size / 4 - $size / 100, $black, $font, '3');
+    imagettftext($image, $size / 50, 0, $size / 4 - $size / 100, $size / 2 - $size / 100, $black, $font, '4');
+    imagettftext($image, $size / 50, 0, $size / 2 - $size / 100, $size / 2 - $size / 100, $black, $font, '5');
+    imagettftext($image, $size / 50, 0, $size - $size / 4 - $size / 100, $size / 2 - $size / 100, $black, $font, '6');
+    imagettftext($image, $size / 50, 0, $size / 4 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '7');
+    imagettftext($image, $size / 50, 0, $size / 2 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '8');
+    imagettftext($image, $size / 50, 0, $size - $size / 4 - $size / 100, $size - $size / 4 - $size / 100, $black, $font, '9');
 
     header("Content-type: image/png");
     imagepng($image);
