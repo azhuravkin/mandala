@@ -13,7 +13,7 @@
     $y3 = $size / 4;
     $y4 = $size / 2;
 
-    imagesetthickness($image, 3);
+    imagesetthickness($image, 4);
 
     imagearc($image, $x4, $y4, $size, $size, 0, 180, $black);
     imagearc($image, $x4, $y4, $size, $size, 180, 360, $black);
