@@ -1,5 +1,5 @@
 <?php
-    $size = 1200;
+    $size = 1500;
     $font_size = $size / 70;
     $dot_size = $size / 100;
     $dot_size2 = $dot_size * 2;
@@ -9,6 +9,7 @@
     $white = imagecolorallocate($image, 255, 255, 255);
     $black = imagecolorallocate($image, 0, 0, 0);
     $red = imagecolorallocate($image, 255, 0, 0);
+    $blue = imagecolorallocate($image, 0, 0, 255);
 
     $side_of_square = $size / sqrt(2);
     $x2 = $y2 = ($size - $side_of_square) / 2;
@@ -57,6 +58,10 @@
     imagettftext($image, $font_size, 0, $x3 - $dot_size2, $y5 + $dot_size2, $black, $font, '7');
     imagettftext($image, $font_size, 0, $x4 - $dot_size, $y5 + $dot_size2, $black, $font, '8');
     imagettftext($image, $font_size, 0, $x5 + $dot_size, $y5 + $dot_size2, $black, $font, '9');
+
+    imageline($image, $x3, $y4, $x4, $y4, $blue);
+    imagefilledpolygon($image, array($x4, $y4, $x4 - 40, $y4 - 10, $x4 - 40, $y4 + 10), 3, $blue);
+
 
     header("Content-type: image/png");
     imagepng($image);
