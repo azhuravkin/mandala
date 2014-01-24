@@ -66,4 +66,86 @@
     header("Content-type: image/png");
     imagepng($image);
     imagedestroy($image);
+
+    $line[12] = array($x3, $y3, $x4, $y3);
+    $line[13] = array($x3, $y3, $x5, $y3);
+    $line[14] = array($x3, $y3, $x3, $y4);
+    $line[15] = array($x3, $y3, $x4, $y4);
+    $line[16] = array($x3, $y3, $x5, $y4);
+    $line[17] = array($x3, $y3, $x3, $y5);
+    $line[18] = array($x3, $y3, $x4, $y5);
+    $line[19] = array($x3, $y3, $x5, $x5);
+
+    $line[21] = array($x4, $y3, $x3, $y3);
+    $line[23] = array($x4, $y3, $x5, $y3);
+    $line[24] = array($x4, $y3, $x3, $y4);
+    $line[25] = array($x4, $y3, $x4, $y4);
+    $line[26] = array($x4, $y3, $x5, $y4);
+    $line[27] = array($x4, $y3, $x3, $y5);
+    $line[28] = array($x4, $y3, $x4, $y5);
+    $line[29] = array($x4, $y3, $x5, $x5);
+
+    $line[31] = array($x5, $y3, $x3, $y3);
+    $line[32] = array($x5, $y3, $x4, $y3);
+    $line[34] = array($x5, $y3, $x3, $y4);
+    $line[35] = array($x5, $y3, $x4, $y4);
+    $line[36] = array($x5, $y3, $x5, $y4);
+    $line[37] = array($x5, $y3, $x3, $y5);
+    $line[38] = array($x5, $y3, $x4, $y5);
+    $line[39] = array($x5, $y3, $x5, $x5);
+
+    $line[41] = array($x3, $y4, $x3, $y3);
+    $line[42] = array($x3, $y4, $x4, $y3);
+    $line[43] = array($x3, $y4, $x5, $y3);
+    $line[45] = array($x3, $y4, $x4, $y4);
+    $line[46] = array($x3, $y4, $x5, $y4);
+    $line[47] = array($x3, $y4, $x3, $y5);
+    $line[48] = array($x3, $y4, $x4, $y5);
+    $line[49] = array($x3, $y4, $x5, $x5);
+
+    $line[51] = array($x4, $y4, $x3, $y3);
+    $line[52] = array($x4, $y4, $x4, $y3);
+    $line[53] = array($x4, $y4, $x5, $y4);
+    $line[54] = array($x4, $y4, $x3, $y4);
+    $line[56] = array($x4, $y4, $x5, $y4);
+    $line[57] = array($x4, $y4, $x3, $y5);
+    $line[58] = array($x4, $y4, $x4, $y5);
+    $line[59] = array($x4, $y4, $x5, $x5);
+
+    $line[61] = array($x5, $y4, $x3, $y3);
+    $line[62] = array($x5, $y4, $x4, $y3);
+    $line[63] = array($x5, $y4, $x5, $y4);
+    $line[64] = array($x5, $y4, $x3, $y4);
+    $line[65] = array($x5, $y4, $x4, $y4);
+    $line[67] = array($x5, $y4, $x3, $y5);
+    $line[68] = array($x5, $y4, $x4, $y5);
+    $line[69] = array($x5, $y4, $x5, $x5);
+
+    $line[71] = array($x3, $y5, $x3, $y3);
+    $line[72] = array($x3, $y5, $x4, $y3);
+    $line[73] = array($x3, $y5, $x5, $y4);
+    $line[74] = array($x3, $y5, $x3, $y4);
+    $line[75] = array($x3, $y5, $x4, $y4);
+    $line[76] = array($x3, $y5, $x5, $y4);
+    $line[78] = array($x3, $y5, $x4, $y5);
+    $line[79] = array($x3, $y5, $x5, $x5);
+
+    $line[81] = array($x4, $y5, $x3, $y3);
+    $line[82] = array($x4, $y5, $x4, $y3);
+    $line[83] = array($x4, $y5, $x5, $y4);
+    $line[84] = array($x4, $y5, $x3, $y4);
+    $line[85] = array($x4, $y5, $x4, $y4);
+    $line[86] = array($x4, $y5, $x5, $y4);
+    $line[87] = array($x4, $y5, $x3, $y5);
+    $line[89] = array($x4, $y5, $x5, $x5);
+
+    $line[91] = array($x5, $y5, $x3, $y3);
+    $line[92] = array($x5, $y5, $x4, $y3);
+    $line[93] = array($x5, $y5, $x5, $y4);
+    $line[94] = array($x5, $y5, $x3, $y4);
+    $line[95] = array($x5, $y5, $x4, $y4);
+    $line[96] = array($x5, $y5, $x5, $y4);
+    $line[97] = array($x5, $y5, $x3, $y5);
+    $line[98] = array($x5, $y5, $x4, $x5);
+
 ?>
